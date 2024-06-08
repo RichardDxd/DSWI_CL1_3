@@ -1,0 +1,88 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/soapservice/personajes"
+           xmlns:tns="http://example.com/soapservice/personajes"
+           elementFormDefault="qualified">
+
+    <xs:element name="getPersonajeRequest" type="tns:getPersonajeRequest"/>
+    <xs:element name="getPersonajeResponse" type="tns:getPersonajeResponse"/>
+    <xs:element name="createPersonajeRequest" type="tns:createPersonajeRequest"/>
+    <xs:element name="createPersonajeResponse" type="tns:createPersonajeResponse"/>
+    <xs:element name="updatePersonajeRequest" type="tns:updatePersonajeRequest"/>
+    <xs:element name="updatePersonajeResponse" type="tns:updatePersonajeResponse"/>
+    <xs:element name="deletePersonajeRequest" type="tns:deletePersonajeRequest"/>
+    <xs:element name="deletePersonajeResponse" type="tns:deletePersonajeResponse"/>
+    <xs:element name="getAllPersonajesRequest" type="tns:getAllPersonajesRequest"/>
+    <xs:element name="getAllPersonajesResponse" type="tns:getAllPersonajesResponse"/>
+
+    <xs:complexType name="getPersonajeRequest">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="getPersonajeResponse">
+        <xs:sequence>
+            <xs:element name="personaje" type="tns:personaje"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="createPersonajeRequest">
+        <xs:sequence>
+            <xs:element name="nomPersonaje" type="xs:string"/>
+            <xs:element name="apePersonaje" type="xs:string"/>
+            <xs:element name="fechNacPersonaje" type="xs:date"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="createPersonajeResponse">
+        <xs:sequence>
+            <xs:element name="personaje" type="tns:personaje"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="updatePersonajeRequest">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+            <xs:element name="nomPersonaje" type="xs:string"/>
+            <xs:element name="apePersonaje" type="xs:string"/>
+            <xs:element name="fechNacPersonaje" type="xs:date"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="updatePersonajeResponse">
+        <xs:sequence>
+            <xs:element name="personaje" type="tns:personaje"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="deletePersonajeRequest">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="deletePersonajeResponse">
+        <xs:sequence>
+            <xs:element name="status" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="getAllPersonajesRequest">
+        <xs:sequence/>
+    </xs:complexType>
+
+    <xs:complexType name="getAllPersonajesResponse">
+        <xs:sequence>
+            <xs:element name="personajes" type="tns:personaje" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="personaje">
+        <xs:sequence>
+            <xs:element name="idPersonaje" type="xs:int"/>
+            <xs:element name="nomPersonaje" type="xs:string"/>
+            <xs:element name="apePersonaje" type="xs:string"/>
+            <xs:element name="fechNacPersonaje" type="xs:date"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

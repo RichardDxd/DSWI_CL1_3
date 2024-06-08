@@ -1,0 +1,91 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/soapservice/programas"
+           xmlns:tns="http://example.com/soapservice/programas"
+           elementFormDefault="qualified">
+
+    <xs:element name="getProgramaRequest" type="tns:getProgramaRequest"/>
+    <xs:element name="getProgramaResponse" type="tns:getProgramaResponse"/>
+    <xs:element name="createProgramaRequest" type="tns:createProgramaRequest"/>
+    <xs:element name="createProgramaResponse" type="tns:createProgramaResponse"/>
+    <xs:element name="updateProgramaRequest" type="tns:updateProgramaRequest"/>
+    <xs:element name="updateProgramaResponse" type="tns:updateProgramaResponse"/>
+    <xs:element name="deleteProgramaRequest" type="tns:deleteProgramaRequest"/>
+    <xs:element name="deleteProgramaResponse" type="tns:deleteProgramaResponse"/>
+    <xs:element name="getAllProgramasRequest" type="tns:getAllProgramasRequest"/>
+    <xs:element name="getAllProgramasResponse" type="tns:getAllProgramasResponse"/>
+
+    <xs:complexType name="getProgramaRequest">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="getProgramaResponse">
+        <xs:sequence>
+            <xs:element name="programa" type="tns:programa"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="createProgramaRequest">
+        <xs:sequence>
+            <xs:element name="titulo" type="xs:string"/>
+            <xs:element name="resumen" type="xs:string"/>
+            <xs:element name="fechaInicio" type="xs:date"/>
+            <xs:element name="idPersonaje" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="createProgramaResponse">
+        <xs:sequence>
+            <xs:element name="programa" type="tns:programa"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="updateProgramaRequest">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+            <xs:element name="titulo" type="xs:string"/>
+            <xs:element name="resumen" type="xs:string"/>
+            <xs:element name="fechaInicio" type="xs:date"/>
+            <xs:element name="idPersonaje" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="updateProgramaResponse">
+        <xs:sequence>
+            <xs:element name="programa" type="tns:programa"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="deleteProgramaRequest">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="deleteProgramaResponse">
+        <xs:sequence>
+            <xs:element name="status" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="getAllProgramasRequest">
+        <xs:sequence/>
+    </xs:complexType>
+
+    <xs:complexType name="getAllProgramasResponse">
+        <xs:sequence>
+            <xs:element name="programas" type="tns:programa" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="programa">
+        <xs:sequence>
+            <xs:element name="idProgramaTv" type="xs:int"/>
+            <xs:element name="titulo" type="xs:string"/>
+            <xs:element name="resumen" type="xs:string"/>
+            <xs:element name="fechaInicio" type="xs:date"/>
+            <xs:element name="idPersonaje" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
