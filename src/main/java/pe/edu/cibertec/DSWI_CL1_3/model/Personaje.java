@@ -14,4 +14,36 @@ public class Personaje {
     private String nomPersonaje;
     private String apePersonaje;
     private Date fechNacPersonaje;
+
+    public int getIdPersonaje() {
+        return idPersonaje;
+    }
+
+    public void setIdPersonaje(int idPersonaje) {
+        this.idPersonaje = idPersonaje;
+    }
+
+    public String getNomPersonaje() {
+        return nomPersonaje;
+    }
+
+    public void setNomPersonaje(String nomPersonaje) {
+        this.nomPersonaje = nomPersonaje;
+    }
+
+    public String getApePersonaje() {
+        return apePersonaje;
+    }
+
+    public void setApePersonaje(String apePersonaje) {
+        this.apePersonaje = apePersonaje;
+    }
+
+    public Date getFechNacPersonaje() {
+        return fechNacPersonaje;
+    }
+
+    public void setFechNacPersonaje(Date fechNacPersonaje) {
+        this.fechNacPersonaje = fechNacPersonaje;
+    }
 }
