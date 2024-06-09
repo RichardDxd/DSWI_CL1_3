@@ -59,7 +59,7 @@ public class ProgramaTvService {
             programaTv.setFechaInicio(fechaInicio.toGregorianCalendar().getTime());
             programaTv.setIdPersonaje(idPersonaje);
 
-            return programaTvRepository.save(programaTv);
+            ProgramaTv save = programaTvRepository.save(programaTv);
         }
         return null;
     }
