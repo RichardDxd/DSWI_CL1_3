@@ -1,7 +1,5 @@
 package pe.edu.cibertec.DSWI_CL1_3.model;
 
-import lombok.Data;
-
 import jakarta.persistence.*;
 import java.util.Date;
 
@@ -45,5 +43,12 @@ public class Personaje {
 
     public void setFechNacPersonaje(Date fechNacPersonaje) {
         this.fechNacPersonaje = fechNacPersonaje;
+    }
+
+    public void setId(int idPersonaje ) {
+        this.idPersonaje = idPersonaje;
+    }
+
+    public void SetId(int idPersonaje) {
     }
 }

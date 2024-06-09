@@ -60,4 +60,8 @@ public class ProgramaTv {
     public void setPersonaje(Personaje personaje) {
         this.personaje = personaje;
     }
+
+
+    public void setIdPersonaje(int idPersonaje) {
+    }
 }
