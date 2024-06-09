@@ -14,6 +14,10 @@ public class ProgramaTvService {
     @Autowired
     private ProgramaTvRepository programaTvRepository;
 
+    public List<ProgramaTv> getAllProgramasTv() {
+        return programaTvRepository.findAll();
+    }
+
     public List<ProgramaTv> findAll() {
         return programaTvRepository.findAll();
     }
@@ -34,8 +38,8 @@ public class ProgramaTvService {
         programaTvRepository.deleteById(id);
     }
 
-    public List<ProgramaTv> getAllProgramasTv() {
-        return programaTvRepository.findAllByUserId(id);
+    public List<ProgramaTv> getAllProgramasTv(int userId) {
+        return programaTvRepository.findAllByUserId(userId);
     }
 
     public ProgramaTv createProgramaTv(String titulo, String resumen, XMLGregorianCalendar fechaInicio, int idPersonaje) {
@@ -54,6 +58,7 @@ public class ProgramaTvService {
             programaTv.setResumen(resumen);
             programaTv.setFechaInicio(fechaInicio.toGregorianCalendar().getTime());
             programaTv.setIdPersonaje(idPersonaje);
+
             return programaTvRepository.save(programaTv);
         }
         return null;

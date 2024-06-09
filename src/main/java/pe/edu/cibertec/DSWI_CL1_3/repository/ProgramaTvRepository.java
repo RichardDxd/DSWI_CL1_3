@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ProgramaTvRepository extends JpaRepository<ProgramaTv, Integer>{
-    List<ProgramaTv> findAllByUserId(int id);
+public interface ProgramaTvRepository extends JpaRepository<ProgramaTv, Integer> {
+    List<ProgramaTv> findAllByUserId(int userId);
 }

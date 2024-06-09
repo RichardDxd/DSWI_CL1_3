@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
+Visite https://eclipse-ee4j.github.io/jaxb-ri 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2024.06.08 a las 05:45:20 PM PET 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://example.com/soapservice/personajes">
+    <schemaBindings map="false">
+      <package name="com.example.soapservice.personajes"/>
+    </schemaBindings>
+    <bindings scd="~tns:getPersonajeRequest">
+      <class ref="com.example.soapservice.personajes.GetPersonajeRequest"/>
+    </bindings>
+    <bindings scd="~tns:getPersonajeResponse">
+      <class ref="com.example.soapservice.personajes.GetPersonajeResponse"/>
+    </bindings>
+    <bindings scd="~tns:createPersonajeRequest">
+      <class ref="com.example.soapservice.personajes.CreatePersonajeRequest"/>
+    </bindings>
+    <bindings scd="~tns:createPersonajeResponse">
+      <class ref="com.example.soapservice.personajes.CreatePersonajeResponse"/>
+    </bindings>
+    <bindings scd="~tns:updatePersonajeRequest">
+      <class ref="com.example.soapservice.personajes.UpdatePersonajeRequest"/>
+    </bindings>
+    <bindings scd="~tns:updatePersonajeResponse">
+      <class ref="com.example.soapservice.personajes.UpdatePersonajeResponse"/>
+    </bindings>
+    <bindings scd="~tns:deletePersonajeRequest">
+      <class ref="com.example.soapservice.personajes.DeletePersonajeRequest"/>
+    </bindings>
+    <bindings scd="~tns:deletePersonajeResponse">
+      <class ref="com.example.soapservice.personajes.DeletePersonajeResponse"/>
+    </bindings>
+    <bindings scd="~tns:getAllPersonajesRequest">
+      <class ref="com.example.soapservice.personajes.GetAllPersonajesRequest"/>
+    </bindings>
+    <bindings scd="~tns:getAllPersonajesResponse">
+      <class ref="com.example.soapservice.personajes.GetAllPersonajesResponse"/>
+    </bindings>
+    <bindings scd="~tns:personaje">
+      <class ref="com.example.soapservice.personajes.Personaje"/>
+    </bindings>
+  </bindings>
+  <bindings scd="x-schema::tns" xmlns:tns="http://example.com/soapservice/programas">
+    <schemaBindings map="false">
+      <package name="com.example.soapservice.programas"/>
+    </schemaBindings>
+    <bindings scd="~tns:getProgramaRequest">
+      <class ref="com.example.soapservice.programas.GetProgramaRequest"/>
+    </bindings>
+    <bindings scd="~tns:getProgramaResponse">
+      <class ref="com.example.soapservice.programas.GetProgramaResponse"/>
+    </bindings>
+    <bindings scd="~tns:createProgramaRequest">
+      <class ref="com.example.soapservice.programas.CreateProgramaRequest"/>
+    </bindings>
+    <bindings scd="~tns:createProgramaResponse">
+      <class ref="com.example.soapservice.programas.CreateProgramaResponse"/>
+    </bindings>
+    <bindings scd="~tns:updateProgramaRequest">
+      <class ref="com.example.soapservice.programas.UpdateProgramaRequest"/>
+    </bindings>
+    <bindings scd="~tns:updateProgramaResponse">
+      <class ref="com.example.soapservice.programas.UpdateProgramaResponse"/>
+    </bindings>
+    <bindings scd="~tns:deleteProgramaRequest">
+      <class ref="com.example.soapservice.programas.DeleteProgramaRequest"/>
+    </bindings>
+    <bindings scd="~tns:deleteProgramaResponse">
+      <class ref="com.example.soapservice.programas.DeleteProgramaResponse"/>
+    </bindings>
+    <bindings scd="~tns:getAllProgramasRequest">
+      <class ref="com.example.soapservice.programas.GetAllProgramasRequest"/>
+    </bindings>
+    <bindings scd="~tns:getAllProgramasResponse">
+      <class ref="com.example.soapservice.programas.GetAllProgramasResponse"/>
+    </bindings>
+    <bindings scd="~tns:programa">
+      <class ref="com.example.soapservice.programas.Programa"/>
+    </bindings>
+  </bindings>
+</bindings>
+
